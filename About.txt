@@ -1,0 +1,2 @@
+Backend: Node,Mongo,Express
+FrontEnd: angular
