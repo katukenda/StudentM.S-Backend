@@ -1,0 +1,35 @@
+<div class="navbar-fixed">
+    <nav class="teal">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">VICERANT IT Solutions</a>
+          
+           <ul class="right hide-on-med-and-down">
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+</div>
+
+
+<div id="bg">
+    <div class="login-box">
+    <img src="../../../assets/images/website/avatar.png" class="avatar">
+        <h1>Login Here</h1>
+            <form class="form" (submit)="onLoginSubmit()">
+            <p>Username</p>
+            <input type="text" class="form-control" [(ngModel)]="username" name="username" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" class="form-control" [(ngModel)]="password" name="password" placeholder="Enter Password">
+            <input type="submit" (click)="loginUser()" name="submit" value="Login">
+            
+            </form>
+    </div>
+</div>
+
+<app-footer></app-footer>

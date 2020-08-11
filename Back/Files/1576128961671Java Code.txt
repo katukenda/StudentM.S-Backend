@@ -1,0 +1,18 @@
+public void enQueue(int value){
+        if(isFull()){
+            System.out.println("Queue is full.");
+            return;
+        }
+        
+        if(this.rear==this.maxSize-1){
+            this.rear=0;
+        }
+        else{
+            this.rear++;//if rear is in middle
+        }
+        
+        this.queueArray[rear]=value;
+        nItems++;
+        System.out.println(value + " inserted.");
+                
+    }

@@ -1,0 +1,105 @@
+<main>
+  <app-tutor-navbar></app-tutor-navbar>
+  
+  <app-tutor-sidenav></app-tutor-sidenav>
+  
+  
+  <div class="container">
+      <div class="row middle">
+          <div class="col-md-6 offset-md-3">
+            
+              <br>
+              <div class="middle">
+              <h3>{{course}} File Uploads</h3>
+              </div> 
+              <br>
+
+              <!--<div class="form-group">
+                  <input id="file-input" type="file" name="file" (change)="fileProgress($event)"  />
+              </div>
+              <div *ngIf="fileUploadProgress">
+                  Upload progress: {{ fileUploadProgress }}
+              </div>
+              <div class="image-preview mb-3" *ngIf="previewUrl">
+                  <img [src]="previewUrl" height="300" />                 
+              </div>
+   
+              <div class="mb-3" *ngIf="uploadedFilePath">
+                  {{uploadedFilePath}}
+              </div>
+              <br>
+               
+              <div class="form-group">
+                  <button class="btn btn-primary"  (click)="onSubmit()">Submit</button>
+              </div>-->
+
+          <div class="middle">
+            <div class="file-field input-field">
+              <div class="form-group upload-field">
+                <label>Choose a file to upload...</label>
+                <input type="file" id="file-input" name="file" (change)="fileProgress($event)"/>
+                <button class="icon-folder"></button>
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
+            </div>
+          </div>
+
+              <br>
+
+              
+              <div class="image-preview mb-3 middle" *ngIf="previewUrl">
+                <img [src]="previewUrl" height="300" />                 
+              </div>
+
+              <div class="mb-3" *ngIf="uploadedFilePath">
+                {{uploadedFilePath}}
+              </div>
+
+              <div class="form-group middle">
+              <button class="upload-file-button btn" (click)="onSubmit()">Import</button>
+              </div>
+              
+          </div>
+      </div>
+      
+      
+      <br><hr><br>
+    
+          <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>File Name</th>
+                  <th>Link</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let f of fileService.files">
+                  <td>{{ f.filename }}</td>
+                  <td><a target="_blank" href="/{{f?.file}}">Click Here</a></td>
+                  <td><a class="delete-file-button btn" (click)="onDelete(f._id)">Delete</a></td>
+                </tr>   
+              </tbody>
+            </table>
+
+            <br><br>
+
+          <div class="middle">
+            <button class="delete-file-button btn" (click)="onDeleteAll()">Delete All</button>
+          </div>
+            
+
+</div>
+
+<div class="push"></div>
+
+
+<app-tutor-footer></app-tutor-footer>
+
+</main>
+
+
+
+

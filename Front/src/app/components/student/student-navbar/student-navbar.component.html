@@ -1,0 +1,14 @@
+<nav>
+    <div class="nav-wrapper teal">
+      
+      <img src="../../../../assets/images/student/NEW-LOGO-crp.png" width="350px" height="60px">
+      <ul class="right hide-on-med-and-down">
+        <!-- <li><a href="#home">Home</a></li> -->
+        <li><a [routerLink]="['/student_dashboard']"><i class="material-icons">dashboard</i></a></li>
+        <!--<li><a [routerLink]="['/student_notice']"><i class="material-icons">notifications_none</i></a></li>-->
+        <li><a [routerLink]="['/Student_chat']"><i class="material-icons">chat</i></a></li>
+        <!--<li><a href=""><i class="material-icons">settings</i></a></li>-->
+        <li><a (click)="_authService.logoutUser()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>

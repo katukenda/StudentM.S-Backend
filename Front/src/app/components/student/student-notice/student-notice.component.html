@@ -1,0 +1,38 @@
+<main>
+        <app-student-navbar></app-student-navbar>
+        
+        <app-student-sidenav></app-student-sidenav>
+
+<div class="container">
+
+        <div class="col s12">
+  
+                <table class="responsive-table highlight">
+                  <thead>
+                    <tr>
+                      <th>Course</th>
+                      <th>Date</th>
+                      <th>Notice</th>
+                      
+                    </tr>
+                  </thead>
+                  <tr *ngFor="let ntc of noticeService.notices">
+                    <td>{{ntc.course}}</td>
+                    <td>{{ntc.date}}</td>
+                    <td>{{ntc.notice}}</td>
+                    
+                  </tr>
+                </table>
+    
+              </div>
+
+</div><!--container-->
+
+<div class="push"></div>
+    <app-student-footer></app-student-footer>
+
+
+
+
+</main> 
+

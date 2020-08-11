@@ -1,0 +1,149 @@
+<main>
+    <app-admin-navbar></app-admin-navbar>
+    
+    <app-admin-sidenav></app-admin-sidenav>
+
+
+
+    <div class="container">
+
+      <h4>Student Attendance</h4>
+
+      <table>
+            
+        
+        <tr>
+            <th>Select Course Name : </th>
+            <div class="input-field col s6">
+                    <select  class="browser-default" [(ngModel)]="course" >
+                    
+                            <option *ngFor="let item of coursearray" value={{item.course}} >{{item.course}}</option>
+                                 
+                    </select>
+                
+            </div>
+      </tr>
+      <div class="col-s12 m4">
+      
+              <button type="button" class="btn btn-success pull-right" (click)="Submit()">Submit</button>
+      </div>
+      <tr>
+
+        <th>Number of Total Days : </th>
+        <div class="input-field col s6">
+           <input  name="total_days" type="number" [(ngModel)]="total_days">
+      </div>
+      </tr>
+
+      <tr>
+
+        <th>Date : </th>
+        <div class="input-field col s6">
+           <input  name="date" type="date" [(ngModel)]="date">
+      </div>
+      </tr>
+
+      </table>
+
+      <table>
+          
+          <tr>
+              <th>Student Name</th>
+              <th>Username</th>
+              <th>Submit Attendance</th>
+          </tr>
+          
+          <tr *ngFor="let std of adminService.enrollments">
+                
+              <td>{{std.fullname}}</td>
+              <td>{{std.username}}</td>
+              <td>
+                <div class="col-s12 m4">
+                
+                    <button class="btn waves-effect waves-light red darken-2" data-target="modal1" class="btn modal-trigger" type="submit" (click)="SubmitDay(std.username)" name="action">Submit Attendance
+                    </button>
+                </div>
+              </td>
+          </tr>
+          
+    
+        </table>
+
+        
+
+    </div>
+
+    <div id="modal1" class="modal">
+            <form class="form">
+                <div class="modal-content">
+                  <table>
+                      <tr>
+                          <th>Course : </th>
+                          <td>
+                                  
+                                <div class="input-field col s6">
+                                        <h6 >{{course}}</h6>
+                                    </div>
+                              
+                          </td>
+                      </tr>
+                      <tr>
+                        <th>Date : </th>
+                        <td>
+                                
+                            <div class="input-field col s6">
+                                <input  name="date" type="date" [(ngModel)]="date">
+                           </div>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Username : </th>
+                        <td>
+                                
+                                <div class="input-field col s6">
+                                        <input type="text" class="form-control" [(ngModel)]="username" name="username" >
+                                    </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>Attended Days : </th>
+                        <td>
+                                
+                            <div class="input-field col s6">
+                                <input type="number" class="form-control" [(ngModel)]="attended_days" name="attended_days" >
+                            </div>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                            <th>Total Days : </th>
+                            <td>
+                                    
+                                <div class="input-field col s6">
+                                    <input type="number" class="form-control" [(ngModel)]="total_days" name="total_days" >
+                                </div>
+                                
+                            </td>
+                        </tr>
+                  </table>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" (click)="SubmitAttendance()" value="Submit" class="modal-close btn">
+             
+                    <div class="divider"></div>
+                    <a class="modal-close btn">Close</a>
+                </div>
+            </form>
+    
+            
+        </div>
+
+        <div class="push"></div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="section teal darken-2 white-text center">
+            <p class="flow-text">VICERANT IT Solutions &copy; 2019</p>
+          </footer>

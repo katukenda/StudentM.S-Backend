@@ -1,0 +1,56 @@
+<main>
+        <app-admin-navbar></app-admin-navbar>
+        
+        <app-admin-sidenav></app-admin-sidenav>
+
+    <div class="container">
+
+        <h4>Select course to see all enrolled students</h4>
+
+        <table> 
+            
+        
+                <tr>
+                      <th>Select Course Name : </th>
+                      <div class="input-field col s6">
+                              <select  class="browser-default" [(ngModel)]="course" >
+                              
+                                      <option *ngFor="let item of coursearray" value={{item.course}} >{{item.course}}</option>
+                                           
+                              </select>
+                          
+                      </div>
+                </tr>
+                <div class="col-s12 m4">
+                
+                        <button type="button" class="btn btn-success pull-right" (click)="Submit()">Submit</button>
+                </div>
+        </table>
+
+        <br><br><hr>
+        <br><br>
+
+        <h5>Students List for {{course}}</h5>
+
+        <table>
+        <tr>
+            <th>Student Name</th>
+            <th>Unenroll</th>
+            
+        </tr>
+        <tr *ngFor="let s of adminService.enrollments">
+            <td>{{ s.fullname }}</td>
+            <td><a class="btn btn-primary" (click)="onDelete(s._id)">Unenroll</a></td>
+           
+        </tr>
+
+        </table>
+
+    </div>
+    <div class="push"></div>
+</main>
+
+<!-- Footer -->
+<footer class="section teal darken-2 white-text center">
+        <p class="flow-text">VICERANT IT Solutions &copy; 2019</p>
+      </footer>

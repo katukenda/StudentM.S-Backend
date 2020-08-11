@@ -1,0 +1,167 @@
+<app-navbar></app-navbar>
+
+<!-- Section: Slider -->
+  <section class="slider">
+    <ul class="slides">
+      <li>
+        <img src="../../../assets/images/website/Slider1.jpg" alt="" height="250px" width="580px">
+        <div class="caption left-align">
+          <h2>Join with Us</h2>
+          <h5 class="black-text text-lighten-3 hide-on-small-only">We provide high standard IT courses for you.</h5>
+          
+        </div>
+      </li>
+      <li>
+        <img src="../../../assets/images/website/Slider3.jpg" alt="" height="250px" width="580px">
+        <div class="caption right-align">
+          <h2>We can guide you</h2>
+          <h5 class="black-text text-lighten-3 hide-on-small-only">We have the best professionals to guide you.</h5>
+          
+        </div>
+      </li>
+      <li>
+        <img src="../../../assets/images/website/Slider2.jpg" alt="" height="250px" width="580px">
+        <div class="caption right-align">
+          <h2>Choose the best for yourself</h2>
+          <h5 class="black-text text-lighten-3 hide-on-small-only">We can help you to sharpen your IT skills.</h5>
+          
+        </div>
+      </li>
+      <li>
+        <img src="../../../assets/images/website/Slider5.jpg" alt="" height="250px" width="580px">
+        <div class="caption left-align">
+          <h2>Achieve your goals</h2>
+          <h5 class="light gray-text text-lighten-3 hide-on-small-only">Climb high up the ladder of success with us.</h5>
+          
+        </div>
+      </li>
+    </ul>
+  </section>
+  <!--end of section-slider-->
+
+<!-- Section: Search -->
+<section id="search" class="section section-search teal darken-1 white-text center scrollspy">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h3>Our Courses</h3>
+          <a class='dropdown-trigger btn btn-large teal lighten-1' href='#' data-target='dropdown1'> <i class="material-icons left">send</i>    Search  our  courses  here      </a>
+
+          <!-- Dropdown Structure -->
+          <ul id='dropdown1' class='dropdown-content'>
+            <li><a [routerLink]="['/java_web']">Java for Beginners</a></li>
+            <li><a [routerLink]="['/c_web']">C</a></li>
+            <li><a [routerLink]="['/phython_web']">Phython</a></li>
+            <li><a [routerLink]="['/web_web']">Web Designing</a></li>
+            <li><a [routerLink]="['/graphic_web']">Graphic Designing</a></li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+</section>
+<!--end of section-search-->
+
+<!-- Section: Popular -->
+<section id="popular" class="section section-popular scrollspy">
+    <div class="container">
+      <div class="row">
+        <h4 class="center">
+          <span class="teal-text">Popular</span> Courses</h4>
+        <div class="col s12 m4">
+          <div class="card">
+            <a [routerLink]="['/java_web']"><div class="card-image">
+              <img src="../../../assets/images/website/java.jpg" alt="">
+              <span class="card-title"><b>Java for Beginners</b></span>
+            </div></a>
+            <div class="card-content">
+              <p>Taking this course will provide you with a basic foundation in Java syntax, which is the first step towards becoming a successful Java developer. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <a [routerLink]="['/web_web']"><div class="card-image">
+              <img src="../../../assets/images/website/web.jpg" alt="">
+              <span class="card-title black-text"><b>Web Designing</b></span>
+            </div></a>
+            <div class="card-content">
+              <p>This course aims to provide beginners with the fundamental conceptual and practical skills needed to master the creation of basic websites.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <a [routerLink]="['/graphic_web']"><div class="card-image">
+              <img src="../../../assets/images/website/graphic.jpg" alt="">
+              <span class="card-title"><b>Graphic Designning</b></span>
+            </div></a>
+            <div class="card-content">
+              <p>Our Graphic Designing course has been designed to give you key conceptual and technical skills to transform fantastic concepts into visual reality.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+<!--end of section popular-->
+
+<!-- Section: Follow -->
+<section class="section section-follow teal darken-2 white-text center">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h4>Follow Us</h4>
+          <p>Follow us on social media to know more about us</p>
+          <a href="htttps://facebook.com" target="_blank" class="white-text">
+            <i class="fab fa-facebook fa-4x"></i>
+          </a>
+          <a href="htttps://twitter.com" target="_blank" class="white-text">
+            <i class="fab fa-twitter fa-4x"></i>
+          </a>
+          <a href="htttps://linkedin.com" target="_blank" class="white-text">
+            <i class="fab fa-linkedin fa-4x"></i>
+          </a>
+          <a href="htttps://googleplus.com" target="_blank" class="white-text">
+            <i class="fab fa-google-plus fa-4x"></i>
+          </a>
+          <a href="htttps://pinterest.com" target="_blank" class="white-text">
+            <i class="fab fa-pinterest fa-4x"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+<!--end of section follow-->
+
+<!--Section: Contact-->
+<section id="contact" class="section section-contact scrollspy">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 ">
+          
+          <ul class="collection with-header">
+            <li class="collection-header">
+              <h4>Contact Us</h4>
+            </li>
+            <li class="collection-item">Vicerant IT Solutions</li>
+            <li class="collection-item">Telephone: 0119878980</li>
+            <li class="collection-item">Email: vicerantitsolutions@gmail.com</li>
+          </ul>
+        </div>
+        
+        
+        
+        
+       
+      </div>
+    </div>
+  </section>
+<!--end of section contact-->
+
+<app-footer></app-footer>
+

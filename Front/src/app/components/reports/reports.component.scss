@@ -1,0 +1,111 @@
+@import '~@angular/material/theming';
+.card-small {
+    width:400px;
+}
+
+.yourClass {
+  margin-left:100px;
+}
+
+header,
+main,
+nav,
+footer {
+  padding-left: 300px;
+}
+
+body {
+  background: white;
+}
+
+@media only screen and (max-width: 992px) {
+    header,
+    main,
+    footer {
+      padding-left: 0;
+    }
+  }
+  footer {
+     position: absolute;
+     bottom: 0;
+     padding-left: 1165px;
+     text-align: center;
+  }
+  
+  #credits li,
+  #credits li a {
+    color: white;
+  }
+  
+  #credits li a {
+    font-weight: bold;
+  }
+  
+  .footer-copyright .container,
+  .footer-copyright .container a {
+    color: #BCC2E2;
+  }
+  
+  .fab-tip {
+    position: fixed;
+    right: 85px;
+    padding: 0px 0.5rem;
+    text-align: right;
+    background-color: #323232;
+    border-radius: 2px;
+    color: #FFF;
+    width: auto;
+  }
+
+  example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+    // font-size: 15px;
+  }
+  ::ng-deep .mat-form-field-underline {
+    display: none;
+}
+::ng-deep .mat-option-text {
+  font-size: 13px;
+}
+$theme-typography: mat-typography-config(
+  $input: mat-typography-level(13px, 1.125, 400)
+);
+
+$theme-primary: mat-palette($mat-indigo);
+$theme-accent:  mat-palette($mat-pink, A200, A100, A400);
+$theme-warn:    mat-palette($mat-red);
+$theme-theme:   mat-light-theme($theme-primary, $theme-accent, $theme-warn);
+
+@include mat-core($theme-typography);
+@include angular-material-theme($theme-theme);
+.autocompleteselect{
+padding-top: 10px;
+//font-size:10px;
+width: 100%;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .container{
+      margin-left: 100px;
+  }
+  
+  .footer,
+  .push {
+    height: 370px;
+  }
+  

@@ -1,0 +1,137 @@
+/* label {
+    cursor: pointer;
+    background-color: aquamarine;
+     Style as you please, it will become the visible UI component. 
+ } */
+
+ /* input[type="file"] {
+    display: none;
+} */
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.uploader{
+    z-index: 6;
+    top: 50px;
+    left:70%;
+    right:20%;
+    text-align: center;
+  }
+  .uploader-left {
+    left: 15%;
+    height: 100%;
+    width: 80%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    line-height: 10%;
+  
+  }
+  .uploader-centered {
+    position: absolute;
+    top: 30%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+  }
+  .file-upload-header{
+    font-style: normal;
+    font-family: "Roboto", Light ;
+  }
+  .submit-button{
+    min-width: 1%;
+    min-height: 3px;
+    z-index: 1;
+  }
+  .slimbar-container{
+    color: blue;
+  
+  }
+  .filedropper{
+    position: relative;
+    //align:left;
+    width:500px;
+    height:100%;
+    right:10%;
+    left: 0%;
+  }
+  .filenameoutput{
+    text-align: right;
+  }
+
+  .btn-flat:hover {
+    background-color: white;
+  } 
+  
+  
+  .btn-flat:visited {
+    background-color: white;
+  }
+
+  .btn-flat {
+    background-color: white;
+  } 
+  
+  
+  .btn:active {
+    background-color: white;
+  }
+  
+  header,
+main,
+nav,
+footer {
+  padding-left: 300px;
+}
+
+body {
+  background: white;
+}
+
+@media only screen and (max-width: 992px) {
+  header,
+  main,
+  footer {
+    padding-left: 0;
+  }
+}
+
+#credits li,
+#credits li a {
+  color: white;
+}
+
+#credits li a {
+  font-weight: bold;
+}
+
+.footer-copyright .container,
+.footer-copyright .container a {
+  color: #BCC2E2;
+}
+
+.fab-tip {
+  position: fixed;
+  right: 85px;
+  padding: 0px 0.5rem;
+  text-align: right;
+  background-color: #323232;
+  border-radius: 2px;
+  color: #FFF;
+  width: auto;
+}
+
+.card .card-content {  
+  margin-top: 150px;
+}
+
+.footer,
+.push {
+  height: 300px;
+}

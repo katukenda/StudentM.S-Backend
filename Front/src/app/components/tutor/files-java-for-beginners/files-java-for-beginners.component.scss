@@ -1,0 +1,120 @@
+header,
+main,
+nav,
+footer {
+  padding-left: 300px;
+}
+
+body {
+  background: white;
+}
+
+@media only screen and (max-width: 992px) {
+  header,
+  main,
+  footer {
+    padding-left: 0;
+  }
+}
+
+#credits li,
+#credits li a {
+  color: white;
+}
+
+#credits li a {
+  font-weight: bold;
+}
+
+.footer-copyright .container,
+.footer-copyright .container a {
+  color: #BCC2E2;
+}
+
+.fab-tip {
+  position: fixed;
+  right: 85px;
+  padding: 0px 0.5rem;
+  text-align: right;
+  background-color: #323232;
+  border-radius: 2px;
+  color: #FFF;
+  width: auto;
+}
+
+.footer,
+.push {
+  height: 100px;
+}
+
+input[type="file"]{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+} 
+
+.upload-field {
+  position: relative;
+  cursor: pointer;
+  width: 320px;
+  height: 40px;
+  line-height: 28px;
+  padding: 5px 10px;
+  border: 1px solid #203F53;
+  border-radius: 5px;
+}
+
+.icon-folder {
+  background-image: url("../../../../assets/images/icon-file-26.jpg");
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+  background-color: transparent;
+  border: none;
+  float: right;
+}
+
+.upload-file-button {
+  height: 40px;
+  width: 120px;
+  text-align: center;
+  margin: 20px 0;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px #203F53;
+  background-color: #203F53;
+  color: white;
+  font-size: 16px;
+}
+
+.delete-file-button {
+  height: 40px;
+  width: 120px;
+  text-align: center;
+  margin: 20px 0;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgb(128, 34, 34);
+  background-color: rgb(179, 63, 59);
+  color: white;
+  font-size: 15px;
+}
+
+.middle {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-button {
+  
+  display: flex;
+  align-items: right;
+  justify-content: right;
+}

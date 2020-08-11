@@ -1,0 +1,42 @@
+<main> 
+        <app-student-navbar></app-student-navbar>
+        <app-student-sidenav></app-student-sidenav>
+
+      <div class="container">
+
+          <br>
+        
+          <div class="middle">
+            <h4>{{course}} Files</h4>
+          </div>
+            <br>
+          <div class="middle">
+            <img src="../../../../assets/images/student/fileUpload.jpg" style="height:300px; width:700px">
+          </div>
+          <br><br><br>
+
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>File Name</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let f of fileService.files">
+                <td>{{ f.filename }}</td>
+                <td><a target="_blank" href="/{{f?.file}}">Click Here</a></td>
+              </tr>   
+            </tbody>
+          </table>
+
+      </div>
+<div class="push"></div>
+     
+<app-student-footer></app-student-footer>
+    
+</main> 
+
+
+
+

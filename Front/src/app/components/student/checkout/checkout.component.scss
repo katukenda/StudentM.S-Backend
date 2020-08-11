@@ -1,0 +1,133 @@
+.card-small {
+    width:400px;
+}
+
+.yourClass {
+    margin-left:100px;
+}
+
+header,
+main,
+nav,
+footer {
+  padding-left: 300px;
+}
+
+body {
+  background: white;
+}
+
+@media only screen and (max-width: 992px) {
+    header,
+    main,
+    footer {
+      padding-left: 0;
+    }
+  }
+  
+  #credits li,
+  #credits li a {
+    color: white;
+  }
+  
+  #credits li a {
+    font-weight: bold;
+  }
+  
+  .footer-copyright .container,
+  .footer-copyright .container a {
+    color: #BCC2E2;
+  }
+  
+  .fab-tip {
+    position: fixed;
+    right: 85px;
+    padding: 0px 0.5rem;
+    text-align: right;
+    background-color: #323232;
+    border-radius: 2px;
+    color: #FFF;
+    width: auto;
+  }
+
+  .divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
+
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+
+// Code for pen
+.horizontal-list {
+  list-style-type: none;
+  text-align: center;
+  margin-bottom: 1.3rem;   
+  padding: 0; //reset
+  
+  @media (min-width:600px) {
+    display: flex;
+    justify-content: space-between; 
+  }
+}
+
+.horizontal-list-item {
+    width: 100%;
+    position: relative;
+    margin-bottom: .5rem;
+
+    &:before {
+        content: "✔️";
+        padding-right: .5rem;
+    }
+}
+
+.horizontal-list-item-tem {
+  width: 100%;
+  position: relative;
+  margin-bottom: .5rem;
+
+
+}h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  
+  // Code for pen
+  .horizontal-list {
+    list-style-type: none;
+    text-align: center;
+    margin-bottom: 1.3rem;   
+    padding: 0; //reset
+    
+    @media (min-width:600px) {
+      display: flex;
+      justify-content: space-between; 
+    }
+  }
+  
+  .horizontal-list-item {
+      width: 100%;
+      position: relative;
+      margin-bottom: .5rem;
+  
+      &:before {
+          content: "✔️";
+          padding-right: .5rem;
+      }
+  }
+
+  .horizontal-list-item-tem {
+    width: 100%;
+    position: relative;
+    margin-bottom: .5rem;
+
+
+}

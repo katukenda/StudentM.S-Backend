@@ -1,0 +1,88 @@
+<main>
+        <app-admin-navbar></app-admin-navbar>
+        <app-admin-sidenav></app-admin-sidenav>
+
+<div class="container">
+    <h4>Assigning courses for teachers</h4>
+
+    <table>
+            
+        
+          <tr>
+                <th>Select Teacher Name : </th>
+                <div class="input-field col s6">
+                        <select  class="browser-default" [(ngModel)]="teacher1">
+                        
+                                <option *ngFor="let item of teacherarray" value={{item.username}} >{{item.username}}</option>
+                                     
+                        </select>
+                    
+                </div>
+          </tr>
+          <tr>
+                <th>Select Course : </th>
+                <div class="input-field col s6">
+                        <select  class="browser-default" [(ngModel)]="course" >
+                        
+                                <option *ngFor="let item of coursearray" value={{item.course}} >{{item.course}}</option>
+                                     
+                        </select>
+                    
+                </div>
+          </tr>
+          <div class="col-s12 m4">
+                
+                <button type="button" class="btn btn-success pull-right" (click)="Submit()">Submit</button>
+        </div>
+    
+        </table>
+
+        <br><br><hr>
+
+        <h4>Select how to view details</h4>
+
+        
+        <table>
+        
+            <tr>
+                  <th>View Courses By Teacher Name : </th>
+                  <div class="input-field col s6">
+                          <select  class="browser-default" [(ngModel)]="teacher2">
+                          
+                                  <option *ngFor="let item of teacherarray" value={{item.username}} >{{item.username}}</option>
+                                       
+                          </select>
+                      
+                  </div>
+            </tr>
+            <div class="col-s12 m4">
+                
+                <button type="button" class="btn btn-success pull-right" (click)="teacherSubmit()">Submit</button>
+            </div>
+          </table>
+            
+
+          <table>
+            <tr>
+              <th>Courses conducted by {{teacher2}}</th>
+              <th>Remove</th>
+            </tr>
+            <tr *ngFor="let t of adminService.courses">
+              <td>{{t.course}}</td>
+              <td><a class="btn btn-primary" (click)="onDelete(t._id)">Remove</a></td>
+            </tr>
+          </table>
+
+
+
+</div><!--container-->
+<div class="push"></div>
+
+</main>
+
+
+
+<!-- Footer -->
+<footer class="section teal darken-2 white-text center">
+        <p class="flow-text">VICERANT IT Solutions &copy; 2019</p>
+</footer>

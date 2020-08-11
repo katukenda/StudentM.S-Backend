@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+        <div class="valign-wrapper" >
+<div class="row">
+
+<div class="col s12">
+    <div class="card-panel grey lighten-3">
+      <h5>Please fill out this form to join with us as a teacher.</h5>
+      <form class="form">
+        <div class="input-field">
+          <input type="text" class="form-control" [(ngModel)]="registerUserData.name" name="name" placeholder="Name">
+          <label for="name">Name</label>
+        </div>
+        <div class="input-field">
+            <input type="text" class="form-control" [(ngModel)]="registerUserData.email" name="email" placeholder="Email">
+            <label for="email">Email</label>
+        </div>
+        <div class="input-field">
+            <input type="text" class="form-control" [(ngModel)]="registerUserData.role" name="role" placeholder="Teacher">
+            <label for="name">Role</label>
+        </div>
+        <div class="input-field">
+            <input type="text" class="form-control" [(ngModel)]="registerUserData.username" name="username" placeholder="Username">
+            <label for="username">Username</label>
+        </div>
+        <div class="input-field">
+            <input type="password" class="form-control" [(ngModel)]="registerUserData.password" name="password" placeholder="Password">
+            <label for="password">Password</label>
+        </div>
+        <input type="submit" (click)="registerUser()" [routerLink]="['/login']" value="Submit" class="btn">
+        
+        </form>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+
+<app-footer></app-footer>

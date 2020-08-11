@@ -1,0 +1,124 @@
+<main>
+    <div *ngIf="isAdmin">
+        <app-admin-navbar></app-admin-navbar>
+        <app-admin-sidenav></app-admin-sidenav>
+    </div>
+    <div *ngIf="isTutor">
+        <app-tutor-navbar></app-tutor-navbar>
+        <app-tutor-sidenav></app-tutor-sidenav>
+    </div>
+    
+    
+    <div class="container">
+<div *ngIf="!seeRes">
+<div class="row">
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content black-text">
+                <div class="row">
+                    <div class="col s12">
+                        <div [hidden]="!isShow">
+                            <div style="color: rgba(0, 0, 0, 0.87);">You can upload results or you can see results here
+                            </div>
+                            <br>
+                            <button class="btn btn-custom right" style="margin-left:10px;" type="button"
+                                (click)="toggleDisplay()">Upload</button>
+                            <!-- <button class="btn btn-custom right" type="button" (click)="resetForm(noticeForm)">See
+                                Results</button> -->
+                            <a class="btn btn-custom right" style="margin-left:10px;" (click)="seeResults()" routerLink="/results">See Results</a>
+                            <div *ngIf="isTutor">
+                                <a class="btn btn-custom right" style="margin-left: 10px;"
+                                    routerLink="/reports-tutor">See Reports</a>
+                            </div>
+                            <div *ngIf="isAdmin">
+                                <a class="btn btn-custom right" style="margin-left: 10px;"
+                                    routerLink="/reports-admin">See Reports</a>
+                            </div>
+                        </div>
+                        <div [hidden]="isShow" class="center">
+                            <ngx-file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)"
+                                (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+                                <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector"
+                                    style="justify-content: center;">
+                                    <div>
+                                        <button class="btn-flat" type="button" (click)="openFileSelector()"
+                                            style="margin-left: 10px;">Drop files</button>
+                                    </div>
+                                </ng-template>
+
+                            </ngx-file-drop>
+                            <div class="upload-table">
+                            <br>
+                                <div class="left">
+                                    <mat-form-field>
+                                        <mat-label>Select the subject</mat-label>
+                                        <mat-select [(value)]="selected">
+                                          <mat-option>None</mat-option>
+                                          <mat-option value="C">C</mat-option>
+                                          <mat-option value="Java for Beginners">Java for Beginners</mat-option>
+                                          <mat-option value="Phython">Python</mat-option>
+                                          <mat-option value="Web Designing">Web Designing</mat-option>
+                                        </mat-select>
+                                      </mat-form-field>
+                                </div>
+                            <br>
+                                <div *ngFor="let item of files; let i=index">
+                                    <div style="text-align: left;"><strong>{{ item.relativePath }}</strong></div>
+                                </div>
+                            <br>
+                            <br>
+                                <!-- <button class="btn btn-custom right" style="margin-left:10px;" type="button"
+                                routerLink="/results"> See Results</button> -->
+                                <!-- <a class="btn btn-custom right" style="margin-left:10px;" routerLink="/results">See Results</a> -->
+                                <button class="btn btn-custom right" style="margin-left:10px;" type="button"
+                                (click)="cancelSubmit()">Cancel</button>
+                                <button class="btn btn-custom right" style="margin-left:10px;" type="button"
+                                    (click)="seeResults()">See Results</button>
+                                <button class="btn btn-custom right" type="button" (click)="confirmSubmit()">Confirm</button>
+                                <p class = "left">{{message}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- The table of Results -->
+<div *ngIf="seeRes">
+<div style = "margin-left:320px;margin-top:20px;margin-bottom: 20px;">    
+    <strong>Marks for {{title}}</strong>
+
+</div>
+<div>
+<table style="margin-left: 100px;margin-right: 100px;" mat-table [dataSource]="dataset | paginate: { itemsPerPage: 10, currentPage: p }" class="mat-elevation-z0"
+    matSort (matSortChange)="sortData($event)">
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    <!-- date Column -->
+    <ng-container class="date-column" matColumnDef="fullname">
+        <th style = "background-color: #009688;" mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+        <td mat-cell *matCellDef="let element">  {{element.fullname}} </td>
+    </ng-container>
+
+    <!-- user Column -->
+    <ng-container matColumnDef="marks">
+        <th style = "background-color: #009688;" mat-header-cell *matHeaderCellDef mat-sort-header> Marks </th>
+        <td mat-cell *matCellDef="let element"> {{element.marks}} </td>
+    </ng-container>
+</table>
+ <div>
+    <pagination-controls (pageChange)="p = $event" class="history-pagination"></pagination-controls>
+</div> 
+</div>
+</div>
+</div>
+
+<div class="push"></div>
+  <!-- Footer -->
+  <app-tutor-footer></app-tutor-footer>
+  </main>

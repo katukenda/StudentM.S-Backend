@@ -1,0 +1,17 @@
+ <!-- LEFT SIDEBAR	 -->
+<ul id="sidenav-2" class="sidenav sidenav-fixed">
+  <li><div class="user-view">
+    <div class="background">
+      <img src="../../../../assets/images/student/sidenav1.jpg">
+    </div>
+    <a href="#user"><img class="circle" src="../../../../assets/images/student/profile.png"></a>
+    <a href="#name"><span class="white-text name">{{user.username}}</span></a>
+    <a href="#email"><span class="white-text email">{{user.email}}</span></a>
+  </div></li>
+ 
+<li><a [routerLink]="['/course_enrollments']"><i class="material-icons">subject</i>Student Enrollments</a></li>
+<li><a [routerLink]="['/tutor_courses']"><i class="material-icons">subject</i>Teacher Courses</a></li>
+<li><a [routerLink]="['/unregister_students']"><i class="material-icons">subject</i>Unregister Students</a></li>
+<li><a [routerLink]="['/unregister_teachers']"><i class="material-icons">subject</i>Unregister Teachers</a></li>
+<!-- <li><a [routerLink]="['/student_notice']"><i class="material-icons">notifications</i>Check notices</a></li> -->
+</ul>

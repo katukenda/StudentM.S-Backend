@@ -1,0 +1,32 @@
+<main>
+    <app-student-navbar></app-student-navbar>  
+    <app-student-sidenav></app-student-sidenav>
+
+    <div class="container">
+        <div style="margin-left:300px; z-index:50;">
+		  <div style = "margin-left:50px;margin-top:10px"><strong>Reports for {{subject}}</strong></div>
+            <form>
+                <mat-form-field class="autocompleteselect">
+                    <mat-placeholder class="placeholder" style="color:#009688;">Select the report type</mat-placeholder>
+                    <input id="select" type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                    <mat-autocomplete style="margin-left:100px; z-index:50;" #auto="matAutocomplete"
+                        [displayWith]="displayFn" (optionSelected)='getReports($event.option.value)'>
+                        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                            {{option.name}}
+                        </mat-option>
+                    </mat-autocomplete>
+
+                </mat-form-field>
+            </form>
+        </div>
+    </div>
+    <br>
+    <div>
+        <!-- <div style="bottom:0px; z-index:1;position:relative;"> -->
+        <canvas id="lineChart1"></canvas>
+    </div>
+
+    <div class="push"></div>
+    <app-tutor-footer style = "position: unset;"></app-tutor-footer>
+
+</main>

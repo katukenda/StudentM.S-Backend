@@ -1,0 +1,79 @@
+<main >
+        <app-student-navbar></app-student-navbar>
+        
+        <app-student-sidenav></app-student-sidenav>
+
+    <div class="container" >
+            <div class="row"> 
+                <h3>Welcome to Chat Application {{user.username}} </h3>
+                <hr>
+                <br>
+                
+                
+            </div>  
+            
+                    <h6>Select chat group</h6>
+            
+            <div class="row">
+                
+                <div class="input-field col s12 m4">
+                        
+                    <select  class="browser-default" [(ngModel)]="room" >
+                          <!-- <option  selected>select chat group</option>  -->
+                        <option *ngFor="let group of chatgroups" value={{group.course}} >{{group.course}}</option>
+                       
+                    </select>
+                    
+                </div>
+                <div class="col s12 m4">
+                    <div style="margin-top:19px;" class="pull-right"> 
+                        <button type="button" class="btn btn-primary" (click)="joinRoom()">Join</button>
+                        <!-- <button type="button" class="btn btn-default" >Leave</button> -->
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="well" style="height:200px; padding:15px;">
+                    <div *ngFor="let item of chats">
+                    <span><strong>{{item.name}} : </strong>{{item.message}}</span>
+                    </div>
+
+
+                  
+                        <div class="row">
+                            <div class="col s12 m8">
+                                <input type="text" class="form-control" [(ngModel)]="message">            
+                            </div>
+                            <div class="col-s12 m4">
+                                    <button type="button" class="btn btn-success pull-right" (click)="sendMessage()">Send</button>
+                            </div>
+                        </div>
+                    
+                    
+
+                
+                </div>
+
+                
+            </div>
+
+
+           
+        </div>
+   
+
+
+    
+
+<section>
+
+</section>
+
+<div class="push"></div>
+        <app-student-footer></app-student-footer>
+   
+    
+    
+    
+  </main> 

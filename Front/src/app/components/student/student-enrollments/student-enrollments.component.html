@@ -1,0 +1,90 @@
+<main>
+        <app-student-navbar></app-student-navbar>
+        
+        <app-student-sidenav></app-student-sidenav>
+
+
+<div class="container">
+<h3>Student Enrollments</h3>
+<hr>
+<h6><u>Enrollments Rules</u></h6>
+<div class="container">
+        <ol>
+            <li>Before Enrollment you must know all information about course.. <br>
+                ex:- payments,lecture times
+            </li>
+            <li>Once you enroll one course you can not change it online. you must meet admins in system.
+            </li>
+            <li>The system get automatically your information and you should select only course that you need to enroll . If they are not correct inform admins it.</li>
+            <li>When you enroll in a course you can join with chat group that relavant to course.</li>
+        </ol>
+    </div>
+
+</div> 
+
+
+
+
+<div class="container">
+<table>
+        <tr>
+            <th>Your username : </th>
+            <td>
+                    
+                <div class="input-field col s6">
+                    <h6 >{{user.username}}</h6>
+                </div>
+                
+            </td>
+        </tr>
+    
+      <tr>
+          <th> Your full name : </th>
+          <td>
+                  
+              <div class="input-field col s6">
+                    <h6 >{{user.name}}</h6>
+              </div>
+              
+          </td>
+      </tr>
+      <tr>
+          <th>Your email : </th>
+          <td>
+                  
+              <div class="input-field col s6">
+                    <h6 >{{user.email}}</h6>
+              </div>
+              
+          </td>
+      </tr>
+      <tr>
+            <th>Select Course : </th>
+            <div class="input-field col s6">
+                    <select  class="browser-default" [(ngModel)]="course" >
+                    
+                            <!-- <option  selected>select chat group</option>  -->
+                            <option *ngFor="let item of coursearray" value={{item.course}} >{{item.course}}</option>
+                                 
+                    </select>
+                
+            </div>
+      </tr>
+      
+      <div class="col-s12 m4">
+            <button type="button" class="btn btn-success pull-right" (click)="Submit()">Submit</button>
+    </div>
+
+    </table>
+</div>
+
+<br><br>
+
+
+        <app-student-footer></app-student-footer>
+   
+    
+    
+    
+  </main> 
+

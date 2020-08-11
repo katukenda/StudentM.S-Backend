@@ -1,0 +1,33 @@
+<main>
+                <app-admin-navbar></app-admin-navbar>
+                
+                <app-admin-sidenav></app-admin-sidenav>
+                
+                <div class="container">
+        
+                        <h5>Registered Teachers List</h5>
+        
+                        <table>
+                        <tr>
+                            <th>Teacher Name</th>
+                            <th>Unregister</th>
+                            
+                        </tr>
+                        <tr *ngFor="let s of adminService.users">
+                            <td>{{ s.name }}</td>
+                            <td><a class="btn btn-primary" (click)="onDeleteReg(s.username)">Unregister</a></td>
+                           
+                        </tr>
+                
+                        </table>
+        
+                </div>
+                <div class="push"></div>
+            </main>
+            
+            <!-- Footer -->
+            <footer class="section teal darken-2 white-text center">
+                    <p class="flow-text">VICERANT IT Solutions &copy; 2019</p>
+                  </footer>
+        
+

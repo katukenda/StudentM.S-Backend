@@ -1,0 +1,97 @@
+<div class="navbar-fixed">
+    <nav class="teal">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">VICERANT IT Solutions</a>
+          
+           <ul class="right hide-on-med-and-down">
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a routerLink="/login" class="waves-effect waves-light btn"><i class="material-icons left">exit_to_app</i>Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</div>
+
+<div class="container">
+    <div class="center-align" >
+            <br>
+            <br>
+
+            <h3>Phython Programming Language</h3>
+    <img src="../../../../assets/images/website/phython-web.png" alt="">
+    <br>
+    <br>
+    <hr>
+    
+    <h4>Course Outline</h4>
+    <p>
+          
+        An Overview of Python<br>
+The python environment<br>
+Getting Started<br>
+Flow Control<br>
+Array types<br>
+Working with Files<br>
+Dictionaries and Sets<br>
+Functions<br>
+Sorting<br>
+Errors and Exception Handling<br>
+Modules and Packages<br>
+Regular Expressions<br>
+Highlights of the Standard Library<br>
+An Introduction to Python Classes<br>
+     
+    </p>
+    <br>
+    <br>
+    <hr>
+    <h4>Course Details</h4>
+    <div class="row">
+        <div class="col s12">
+         
+            <table>
+        
+                        
+                      
+                <tr>
+                  
+                  <th>Course</th>
+                  <th>Duration</th>
+                  <th>Registration Fee</th>
+                  <th>Total Fee</th>
+                  <th>Installation Fee</th>
+                  <th>Day and Time</th>
+                  <th>Starting Date</th>
+                  <th>Ending date</th>
+                </tr>
+              
+              <tr *ngFor="let cd of courseDetailsService.courseDetails">
+                
+                <td>{{cd.course}}</td>
+                <td>{{cd.duartion}}</td>
+                <td>{{cd.regfee}}</td>
+                <td>{{cd.totfee}}</td>
+                <td>{{cd.insfee}}</td>
+                <td>{{cd.dayandtime}}</td>
+                <td>{{cd.sdate}}</td>
+                <td>{{cd.edate}}</td>
+                
+                
+              </tr>
+            </table>
+        </div>
+        
+        
+        </div>
+
+</div>
+</div>
+
+<app-footer></app-footer>
+
+

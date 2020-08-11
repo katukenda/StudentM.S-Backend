@@ -1,0 +1,12 @@
+<nav>
+  <div class="nav-wrapper teal">
+   <img src="../../../../assets/images/tutor/NEW-LOGO-crp.png" width="350px" height="60px">
+    <ul class="right hide-on-med-and-down">
+      
+      <li><a [routerLink]="['/tutor_dashboard']"><i class="material-icons">dashboard</i></a></li>
+      
+      <li><a (click)="_authService.logoutUser()">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+    

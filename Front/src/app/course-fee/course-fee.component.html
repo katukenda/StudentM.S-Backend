@@ -1,0 +1,21 @@
+<h1>Your Payments List</h1>
+
+<div class="horizontal-list" *ngFor="let data of dataSet">
+
+  <div class="horizontal-list-item">
+    {{data.advertistmentId}}
+  </div>
+
+  <div class="horizontal-list-item">
+    {{data.amount}}
+  </div>
+
+  <div class="horizontal-list-item-tem">
+    <div (click)="payNow(data)">
+      <input name="submit" type="image" src="https://www.payhere.lk/downloads/images/pay_with_payhere.png"
+        style="width:200px;" value="Buy Now">
+    </div>
+  </div>
+
+
+</div>

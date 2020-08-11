@@ -1,0 +1,62 @@
+<main>
+    <app-student-navbar></app-student-navbar>
+    <app-student-sidenav></app-student-sidenav>
+    <div class="container">
+    
+        <h1>Your Payments </h1>
+        <hr>
+    
+        <h6><u>Payment rules</u></h6><br> 
+      
+            <ol>
+                <li>Before online paying you must know all terms and condition  about Payhere..<a href="https://www.payhere.lk/legal">(https://www.payhere.lk/legal) </a>
+                    
+                </li>
+                <li>
+                    Before online paying you must know total payment for each courses..
+                </li>
+                <li>Once you pay for course you can not change it ..
+                </li>
+                <li>you can pay only by using values of x500</li>
+    
+                <li>you should include only value that you need to pay</li> 
+            </ol> 
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <table>
+            <tr >
+                  
+                <th>{{course}}</th>
+                <th><input type="number" placeholder="enter amount" [(ngModel)]="amount"></th>
+                <th><div (click)="payNow()">
+                      <input name="submit" type="image" src="https://www.payhere.lk/downloads/images/pay_with_payhere.png"
+                        style="width:200px;" value="Buy Now">
+                    </div></th>
+            </tr>
+        </table>
+        <br><br><br>
+    
+        <table>
+            <tr><th><u>My payments</u></th></tr>
+            <tr><th>Course</th><th>Amount</th></tr>
+            <tr *ngFor="let s of payments">
+                <td>{{ s.course }}</td>
+                <td>{{s.amount}}</td>
+            </tr>
+        </table>
+    
+    
+    
+    </div>
+    <app-student-footer></app-student-footer>
+    
+    </main>
+    

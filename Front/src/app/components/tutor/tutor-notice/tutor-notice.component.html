@@ -1,0 +1,99 @@
+<main>
+  <app-tutor-navbar></app-tutor-navbar> 
+  
+  <app-tutor-sidenav></app-tutor-sidenav>
+  
+  
+  <div class="container">
+
+<div class="row">
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content black-text"> 
+          <div class="row">
+            <div class="col s12">
+  
+              <form #noticeForm="ngForm" (ngSubmit)="Submit()">
+                <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="noticeService.selectedNotice._id">
+                <div class="raw">select a course</div>
+               
+                <div class="row">
+                  <div class="input-field col s12">
+                    
+                        <select  class="browser-default" name="course" #name="ngModel" [(ngModel)]="course" >
+                            <!-- <option  selected>select chat group</option>  -->
+                          <option *ngFor="let s of courses" value={{s.course}} >{{s.course}}</option>
+                         
+                      </select>
+                    <!-- <input type="text" name="course" #name="ngModel" [(ngModel)]="noticeService.selectedNotice.course" placeholder="Enter course" required>
+                     -->
+                  </div>
+                </div>
+               
+                <div class="row">
+                    <div class="input-field col s12">
+                      <input type="date" name="date" #name="ngModel" [(ngModel)]="date" placeholder="Enter date" required>
+                      <label>Date :
+                        
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="input-field col s12">
+                        <input type="text" name="notice" #name="ngModel" [(ngModel)]="notice" placeholder="Write your notice" required>
+                        <label>Notice :
+                          
+                        </label>
+                      </div>
+                  </div>
+                  
+                  <div class="row">
+                      <div class="input-field col s12">
+                        <button class="btn btn-custom right" type="button" (click)="resetForm(noticeForm)">Reset</button>
+                        <button class="btn btn-custom right" type="submit" [disabled]="!noticeForm.valid">Submit</button>
+                      </div>
+                  </div>
+  
+              </form>
+  
+            </div>
+            <div class="col s12">
+  
+              <table class="responsive-table highlight">
+                <thead>
+                  <tr>
+                    <th>Course</th>
+                    <th>Date</th>
+                    <th>Notice</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tr *ngFor="let ntc of noticeService.notices">
+                  <td>{{ntc.course}}</td>
+                  <td>{{ntc.date}}</td>
+                  <td>{{ntc.notice}}</td>
+                  <td>
+                    <a class="action-btn" (click)="onEdit(ntc)">
+                      <i class="material-icons">edit</i>
+                    </a>
+                    <a class="action-btn" (click)="onDelete(ntc._id, noticeForm)">
+                      <i class="material-icons">delete</i>
+                    </a>
+                  </td>
+                </tr>
+              </table>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="push"></div>
+
+<!-- Footer -->
+<app-tutor-footer></app-tutor-footer>
+</main>
